@@ -4,7 +4,7 @@ services:
     build: ./
     image: fare-prediction:latest
     volumes:
-      - .:/src
+      - .:/code
     tty: true
     stdin_open: true
     command: /bin/bash

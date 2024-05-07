@@ -1,6 +1,6 @@
 FROM python:3.11.6
 
-WORKDIR /src
+WORKDIR /code
 
 RUN apt-get update
 RUN pip install --upgrade pip
