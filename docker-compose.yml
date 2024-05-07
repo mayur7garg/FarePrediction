@@ -1,0 +1,11 @@
+name: "fare-prediction"
+services:
+  fare-prediction:
+    build: ./
+    image: fare-prediction:latest
+    volumes:
+      - .:/src
+    tty: true
+    stdin_open: true
+    command: /bin/bash
+    container_name: fare-prediction
