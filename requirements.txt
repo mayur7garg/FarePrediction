@@ -4,3 +4,4 @@ polars==0.20.25
 pyarrow==16.0.0
 scikit-learn==1.4.2
 seaborn==0.13.2
+statsmodels==0.14.2
