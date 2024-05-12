@@ -11,7 +11,7 @@ PROCESSED_DATA_DIR.joinpath('test').mkdir(exist_ok = True)
 
 VALIDATION_CUTOFF = pl.date(2018, 10, 31)
 
-def print_metrics(y_true, y_pred, label = ""):
+def print_metrics(y_true: pl.Series, y_pred: pl.Series, label = ""):
     if len(label) > 0:
         print(label)
 
@@ -23,5 +23,8 @@ def print_metrics(y_true, y_pred, label = ""):
 
     r2 = r2_score(y_true, y_pred)
     print(f"R2: {r2:.3%}")
+
+    max_error = (y_true - y_pred).abs().max()
+    print(f"Max error: {max_error:.4f}")
 
     print()
