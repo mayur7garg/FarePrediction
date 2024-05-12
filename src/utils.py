@@ -9,7 +9,7 @@ PROCESSED_DATA_DIR = Path("..", "data", "processed")
 PROCESSED_DATA_DIR.joinpath('training').mkdir(exist_ok = True)
 PROCESSED_DATA_DIR.joinpath('test').mkdir(exist_ok = True)
 
-VALIDATION_CUTOFF = pl.date(2018, 10, 31)
+VALIDATION_CUTOFF = pl.date(2018, 11, 30)
 
 def print_metrics(y_true: pl.Series, y_pred: pl.Series, label = ""):
     if len(label) > 0:
